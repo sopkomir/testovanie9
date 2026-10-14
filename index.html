@@ -1,3 +1,7 @@
+<!doctype html>
+<html lang="sk">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>T9 Tréning</title>
 <meta name="description" content="Bezplatný tréning na Testovanie 9 z matematiky a slovenčiny: denné misie, obmieňané úlohy podľa matice NIVaM, ukážky zo slovenskej klasiky a AI tutor.">
 <meta name="theme-color" content="#0E1630">
@@ -55,6 +59,9 @@ button{font:inherit;color:inherit}
 .logo b{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--ink);color:var(--paper);font-family:var(--f-mono);font-size:15px}
 .count{margin-left:auto;text-align:right;font-size:13px;color:var(--muted);line-height:1.2}
 .count strong{display:block;font-family:var(--f-mono);font-size:17px;color:var(--ink)}
+.fsb{flex:none;width:40px;height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);display:grid;place-items:center;cursor:pointer;padding:0}
+.fsb svg{width:20px;height:20px}
+.fsb:hover{border-color:var(--primary);color:var(--primary)}
 
 /* home */
 .hero{padding-block:22px 8px}
@@ -365,6 +372,7 @@ details.passage[open] summary::after{content:"skryť"}
 <header class="top"><div class="in">
   <button class="logo" id="home-btn" aria-label="Domov"><b>T9</b>Tréning</button>
   <div class="count" id="countdown"></div>
+  <button class="fsb" id="fsb" hidden aria-label="Celá obrazovka" title="Celá obrazovka"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </div></header>
 
 <main class="wrap" id="app"></main>
@@ -3307,6 +3315,17 @@ const store=load(); store.slots=store.slots||{}; store.seenIntro=!!store.seenInt
 function mastery(id){const s=store.slots[id];if(!s||!s.n)return 0;return Math.round(100*s.score/Math.max(s.n,4))}
 function record(slot,pts){const s=store.slots[slot]||(store.slots[slot]={n:0,score:0});s.n++;s.score+=pts;
   if(s.n>12){s.score=s.score*12/s.n;s.n=12} save()}
+
+/* --- celá obrazovka: tlačidlo sa ukáže len vo vloženom okne (iframe) alebo keď je aplikácia na celej obrazovke --- */
+(function(){const b=$("#fsb");let embedded=false;try{embedded=window.self!==window.top}catch(e){embedded=true}
+  const isFs=()=>!!(document.fullscreenElement||document.webkitFullscreenElement);
+  const upd=()=>{b.hidden=!(embedded||isFs());b.setAttribute("aria-label",isFs()?"Zavrieť celú obrazovku":"Celá obrazovka");b.title=b.getAttribute("aria-label")};
+  b.onclick=async()=>{
+    if(isFs()){(document.exitFullscreen||document.webkitExitFullscreen).call(document);return}
+    const el=document.documentElement,req=el.requestFullscreen||el.webkitRequestFullscreen;
+    if(req&&(document.fullscreenEnabled||document.webkitFullscreenEnabled)){try{await req.call(el);return}catch(e){}}
+    window.open(location.href,"_blank","noopener")};
+  document.addEventListener("fullscreenchange",upd);document.addEventListener("webkitfullscreenchange",upd);upd()})();
 
 /* --- odpočet --- */
 (function(){const d=Math.ceil((new Date(CONFIG.testDate+"T08:00:00")-new Date())/864e5);
