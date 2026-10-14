@@ -1,4 +1,9 @@
 <title>T9 Tréning</title>
+<meta name="description" content="Bezplatný tréning na Testovanie 9 z matematiky a slovenčiny: denné misie, obmieňané úlohy podľa matice NIVaM, ukážky zo slovenskej klasiky a AI tutor.">
+<meta name="theme-color" content="#0E1630">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -83,6 +88,64 @@ button{font:inherit;color:inherit}
 .slot .train{font-size:14px;padding:6px 10px;min-height:36px;border-radius:8px}
 .pct{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
 .note{margin-top:22px;font-size:14px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 12px}
+
+/* titulná karta */
+.cover{margin-top:14px;border-radius:20px;background:radial-gradient(130% 120% at 100% 0%,#2A3FA8 0%,#16215A 38%,#0E1630 72%);color:#EEF1FA;overflow:hidden;box-shadow:0 18px 40px -22px rgba(14,22,48,.8);position:relative}
+.cv-in{display:grid;gap:4px;padding:20px 20px 10px}
+.cv-art{order:-1;display:flex;justify-content:center}
+.cv-svg{width:100%;max-width:300px;height:auto;display:block}
+@media (min-width:600px){.cv-in{grid-template-columns:1.35fr 1fr;align-items:center;gap:10px;padding:26px 24px 14px}.cv-art{order:0}}
+.cv-eye{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#AEB9DD}
+.cover h1{font-size:clamp(34px,9vw,46px);margin-top:6px;color:#fff}
+.cover .hl{color:#0E1630;background:#E3F25A;padding:0 .16em;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.cv-txt p{color:#C7CFE6;margin:12px 0 0;max-width:46ch}
+.cv-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn.cv-p{background:#E3F25A;color:#0E1630;box-shadow:0 6px 18px -8px rgba(227,242,90,.7)}
+.btn.cv-p:hover{filter:brightness(1.05)}
+.btn.cv-s{background:transparent;border:1.5px solid rgba(255,255,255,.38);color:#fff}
+.btn.cv-s:hover{border-color:#fff}
+.cv-free{font-size:13px;color:#9FAACB;margin-top:12px}
+.cv-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12);background:rgba(8,13,32,.35)}
+.cv-stats>div{padding:12px 10px 14px;text-align:center;border-left:1px solid rgba(255,255,255,.08)}
+.cv-stats>div:first-child{border-left:0}
+.cv-stats b{display:block;font-family:var(--f-mono);font-size:22px;color:#fff;line-height:1.1}
+.cv-stats span{font-size:11.5px;color:#9FAACB;letter-spacing:.02em}
+.cv-stats .lv{display:block;height:4px;border-radius:2px;background:rgba(255,255,255,.14);margin:6px auto 0;max-width:70px;overflow:hidden}
+.cv-stats .lv i{display:block;height:100%;background:#E3F25A}
+.cv-path{stroke-dasharray:6 7;animation:cvdash 22s linear infinite}
+@keyframes cvdash{to{stroke-dashoffset:-260}}
+.cv-float{animation:cvfloat 6s ease-in-out infinite}
+.cv-float.d2{animation-delay:-2s}.cv-float.d3{animation-delay:-4s}
+@keyframes cvfloat{50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion: reduce){.cv-path,.cv-float{animation:none}}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.feat>div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 12px 13px;box-shadow:var(--shadow)}
+.feat svg{width:26px;height:26px;display:block;margin-bottom:6px}
+.feat strong{display:block;font-family:var(--f-display);font-size:15px;line-height:1.2}
+.feat span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+@media (max-width:420px){.feat{grid-template-columns:1fr}.feat>div{display:grid;grid-template-columns:30px 1fr;gap:2px 10px;align-items:start}.feat svg{grid-row:span 2;margin:2px 0 0}.feat span{margin:0}}
+.plan-list{display:grid;gap:8px}
+.plan-i{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;cursor:pointer;min-height:52px}
+.plan-i:hover{border-color:var(--primary)}
+.pl-s{font-family:var(--f-mono);font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:6px;background:var(--mark-soft)}
+.pl-n{font-weight:700}
+.pl-m{font-family:var(--f-mono);font-size:13px;color:var(--bad)}
+.plan-empty{margin:0;background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:14px;color:var(--muted)}
+.mdone{display:flex;gap:14px;align-items:center;margin-top:14px;padding:14px 16px;border-radius:14px;background:#0E1630;color:#fff;position:relative;overflow:hidden}
+.mdone svg{flex:none;width:44px;height:44px}
+.mdone strong{display:block;font-family:var(--f-display);font-size:19px}
+.mdone span{color:#C7CFE6;font-size:14.5px}
+.mdone .cf{position:absolute;width:7px;height:7px;border-radius:2px;top:-10px;animation:cffall 1.6s ease-in forwards}
+@keyframes cffall{to{transform:translateY(110px) rotate(260deg);opacity:0}}
+@media (prefers-reduced-motion: reduce){.mdone .cf{display:none}}
+.test-card.pulse{outline:3px solid var(--mark);outline-offset:3px;transition:outline-color .3s}
+.foot{margin-top:30px;display:grid;gap:8px}
+.foot details{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.foot summary{cursor:pointer;padding:12px 14px;font-weight:700;font-family:var(--f-display)}
+.foot .fb-in{padding:0 14px 14px;font-size:15px;color:var(--muted)}
+.foot .fb-in p{margin:0 0 8px}
+.foot .fb-in ul{margin:0;padding-left:18px}
+.foot .fb-in li{margin:3px 0}
 
 /* intro animation */
 .intro{padding-block:18px}
@@ -176,7 +239,7 @@ button{font:inherit;color:inherit}
 .score span{color:var(--muted)}
 .res{display:grid;gap:6px;margin-top:16px}
 .res div{display:flex;justify-content:space-between;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-.res em{font-style:normal;font-family:var(--f-mono)}
+.res em{font-style:normal;font-family:var(--f-mono);white-space:nowrap}
 /* obrázky, tabuľky, test */
 .figwrap{margin:4px 0 14px;overflow-x:auto}
 .fig{display:block;width:100%;max-width:400px;height:auto}
@@ -263,6 +326,7 @@ details.passage[open] summary::after{content:"skryť"}
 .tools{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;width:100%}
 .tools.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .tools .btn{min-height:44px;padding:8px 4px;font-size:14.5px}
+@media (max-width:400px){.tools:not(.two) .btn{font-size:13px;padding-inline:2px}}
 .flink{padding:6px 0;min-height:36px;margin-top:4px}
 /* kalkulačka */
 .calc .panel{max-height:88vh}
@@ -2389,8 +2453,8 @@ details.passage[open] summary::after{content:"skryť"}
       if (n === 7) w.push({ v: "sedmich", id: "stem" }); if (n === 8) w.push({ v: "osmich", id: "stem" }); if (n === 6) w.push({ v: "šestich", id: "stem" }); if (n === 5) w.push({ v: "päťich", id: "stem" });
       return OPEN({
         q: `Prepíš číslovku slovom v správnom tvare: ${fr[0]}`, accept: [ok], wrongs: w, given: [`${fr[1]} ${n} ${fr[2]}`], find: "tvar číslovky",
-        hints: [`Opýtaj sa: ${fr[1]} kom? ${fr[1]} čom? Ide o 6. pád (lokál).`, "Číslovky 5 až 10 majú v lokáli koncovku -ich s mäkkým i: piatich, šiestich.", "Pozor na zmenu kmeňa: päť – piatich, sedem – siedmich, osem – ôsmich."],
-        errors: { case: "Číslovka musí byť v 6. páde (na kom? na čom?).", iy: "Koncovka číslovky je -ich s mäkkým i.", stem: "Pri skloňovaní sa mení kmeň: sedem – siedmich, osem – ôsmich, šesť – šiestich, päť – piatich." },
+        hints: [`Opýtaj sa: ${fr[1]} kom? ${fr[1]} čom? Ide o lokál (6. pád).`, "Číslovky 5 až 10 majú v lokáli koncovku -ich s mäkkým i: piatich, šiestich.", "Pozor na zmenu kmeňa: päť – piatich, sedem – siedmich, osem – ôsmich."],
+        errors: { case: "Číslovka musí byť v lokáli (na kom? na čom?).", iy: "Koncovka číslovky je -ich s mäkkým i.", stem: "Pri skloňovaní sa mení kmeň: sedem – siedmich, osem – ôsmich, šesť – šiestich, päť – piatich." },
         steps: [`${fr[1]} ${ok} ${fr[2]}`]
       });
     }
@@ -2498,7 +2562,7 @@ details.passage[open] summary::after{content:"skryť"}
       const rod = { m: "mužského", f: "ženského", n: "stredného" }[g];
       return MC({
         q: `Ktoré podstatné meno sa skloňuje podľa vzoru ${k}?`, correct: corr, wrongs, given: [`vzor ${k}`], find: "podstatné meno",
-        hints: [`Vzory ${rod} rodu sú: ${vz.join(", ")}.`, g === "m" ? "Najprv rozhodni, či ide o životné (osoba) alebo neživotné podstatné meno." : g === "f" ? "Rozhoduje zakončenie: -a po tvrdej spoluhláske (žena), -a po mäkkej (ulica), spoluhláska – 2. pád na -e (dlaň – dlane) alebo na -i, najmä pri -sť (kosť – kosti)." : "Rozhoduje zakončenie: -o (mesto), -e (srdce), -ie (vysvedčenie), -a/-ä pri mláďatách (dievča).", `Porovnaj 2. pád: bez ${k === "chlap" ? "chlapa" : k === "hrdina" ? "hrdinu" : k === "dub" ? "duba" : k === "stroj" ? "stroja" : k === "žena" ? "ženy" : k === "ulica" ? "ulice" : k === "dlaň" ? "dlane" : k === "kosť" ? "kosti" : k === "mesto" ? "mesta" : k === "srdce" ? "srdca" : k === "vysvedčenie" ? "vysvedčenia" : "dievčaťa"}.`],
+        hints: [`Vzory ${rod} rodu sú: ${vz.join(", ")}.`, g === "m" ? "Najprv rozhodni, či ide o životné (osoba) alebo neživotné podstatné meno." : g === "f" ? "Rozhoduje zakončenie: -a po tvrdej spoluhláske (žena), -a po mäkkej (ulica), spoluhláska – rozhoduje zakončenie v nominatíve množného čísla: -e → vzor dlaň (dlane), -i → vzor kosť (kosti)." : "Rozhoduje zakončenie: -o (mesto), -e (srdce), -ie (vysvedčenie), -a/-ä pri mláďatách (dievča).", `Porovnaj genitív jednotného čísla: bez ${k === "chlap" ? "chlapa" : k === "hrdina" ? "hrdinu" : k === "dub" ? "duba" : k === "stroj" ? "stroja" : k === "žena" ? "ženy" : k === "ulica" ? "ulice" : k === "dlaň" ? "dlane" : k === "kosť" ? "kosti" : k === "mesto" ? "mesta" : k === "srdce" ? "srdca" : k === "vysvedčenie" ? "vysvedčenia" : "dievčaťa"}.`],
         errors: { otherVzor: "Toto podstatné meno sa skloňuje podľa iného vzoru." },
         steps: [`${corr} → vzor ${k}`]
       });
@@ -2520,7 +2584,7 @@ details.passage[open] summary::after{content:"skryť"}
       return MC({
         text: s, q: "Akým vetným členom je zvýraznené slovo (spojenie)?", correct: k, wrongs: keys.filter((x) => x !== k), wid: "wrong",
         given: [s.replace(/\*\*/g, "")], find: "vetný člen",
-        hints: ["Najprv nájdi vo vete prísudok (čo sa deje?) a podmet (kto? čo? to robí).", "Predmet odpovedá na pádové otázky okrem 1. pádu (koho? čo? komu? čomu? o kom?). Príslovkové určenie na otázky kde? kedy? ako? prečo?", "Prívlastok rozvíja podstatné meno a odpovedá na otázky aký? ktorý? čí?"],
+        hints: ["Najprv nájdi vo vete prísudok (čo sa deje?) a podmet (kto? čo? to robí).", "Predmet odpovedá na pádové otázky okrem nominatívu (koho? čo? komu? čomu? o kom?). Príslovkové určenie na otázky kde? kedy? ako? prečo?", "Prívlastok rozvíja podstatné meno a odpovedá na otázky aký? ktorý? čí?"],
         errors: { wrong: "Toto nie je správny vetný člen. Polož si otázku od slova, ktoré zvýraznené slovo rozvíja." },
         steps: [`${s.replace(/\*\*/g, "")} → ${k}`]
       });
@@ -2548,7 +2612,9 @@ details.passage[open] summary::after{content:"skryť"}
   });
 
   // ---------- 11 · Druhy viet, súvetie, čiarka ----------
-  const VDRUH = { "oznamovacia": ["Zajtra bude pršať.", "Vlak mešká desať minút.", "Na stole leží kniha."], "opytovacia": ["Prídeš zajtra na tréning?", "Kde si nechal kľúče?", "Kto vyhral súťaž?"], "rozkazovacia": ["Zatvor okno.", "Prines mi, prosím, vodu.", "Nevyrušujte."], "želacia": ["Kiežby už boli prázdniny!", "Nech sa ti darí!", "Keby tak prestalo pršať!"] };
+  const VDRUH = { "oznamovacia": ["Zajtra bude pršať.", "Vlak mešká desať minút.", "Na stole leží kniha."], "opytovacia": ["Prídeš zajtra na tréning?", "Kde si nechal kľúče?", "Kto vyhral súťaž?"], "rozkazovacia": ["Zatvor okno.", "Prines mi, prosím, vodu.", "Nevyrušujte."], "želacia": ["Kiežby už boli prázdniny!", "Nech sa ti darí!", "Keby tak prestalo pršať!"], "zvolacia": ["Aký nádherný výhľad!", "To je ale prekvapenie!", "Ako rýchlo to ubehlo!"] };
+  // želacia a zvolacia veta sa navzájom neponúkajú ako nesprávne možnosti (obe môžu mať výkričník)
+  const VDRUH_CLASH = { "želacia": ["zvolacia"], "zvolacia": ["želacia"] };
   const JEDN = ["Na výlet sme si zobrali jablká, hrušky a sladkosti.", "Po vyučovaní sme išli s kamarátmi do parku.", "Starý pán pomaly kráčal po zasneženom chodníku.", "V lese sme videli srnu a dve srnčatá.", "Ráno, na obed aj večer pršalo.", "Mama aj otec pracujú v nemocnici."];
   const SUV = ["Keď sme prišli domov, začalo pršať.", "Vieme, že test bude ťažký.", "Petra som pozval, ale neprišiel.", "Kniha, ktorú som čítal, bola napínavá.", "Svietilo slnko a vtáky spievali.", "Ostal doma, lebo bol chorý."];
   const CIARKA = [["Vieme, že to zvládneš.", "Vieme že to zvládneš."], ["Kniha, ktorú mi požičal, je napínavá.", "Kniha ktorú mi požičal, je napínavá."], ["Učil sa celý večer, aby test zvládol.", "Učil sa celý večer aby test zvládol."], ["Kúpili sme chlieb, maslo a syr.", "Kúpili sme chlieb, maslo, a syr."], ["Keď prší, ostávame doma.", "Keď prší ostávame doma."], ["Pes a mačka spali pri kozube.", "Pes, a mačka spali pri kozube."], ["Prišiel neskoro, lebo mu ušiel autobus.", "Prišiel neskoro lebo mu ušiel autobus."], ["Bol unavený, ale šťastný.", "Bol unavený ale šťastný."], ["Na lúke rástli margaréty a zvončeky.", "Na lúke rástli margaréty, a zvončeky."]];
@@ -2557,10 +2623,10 @@ details.passage[open] summary::after{content:"skryť"}
     gen() {
       const k = rint(0, 2);
       if (k === 0) {
-        const keys = Object.keys(VDRUH), d = pick(keys);
-        return MC({ q: `Ktorá veta je ${d}?`, correct: pick(VDRUH[d]), wrongs: keys.filter((x) => x !== d).map((x) => ({ label: pick(VDRUH[x]), id: "otherType" })),
-          given: ["druhy viet podľa obsahu (zámeru hovoriaceho)"], find: `${d} veta`,
-          hints: ["Druhy viet podľa obsahu (zámeru hovoriaceho): oznamovacia, opytovacia, rozkazovacia, želacia.", "Želacia veta vyjadruje želanie (kiežby, nech, keby tak). Každý druh vety môže mať aj formu zvolania (Zvoní!).", "Pomôže aj interpunkčné znamienko na konci, ale rozhoduje obsah vety."],
+        const keys = Object.keys(VDRUH), d = pick(keys), others = keys.filter((x) => x !== d && !(VDRUH_CLASH[d] || []).includes(x));
+        return MC({ q: `Ktorá veta je ${d}?`, correct: pick(VDRUH[d]), wrongs: others.map((x) => ({ label: pick(VDRUH[x]), id: "otherType" })),
+          given: ["vety podľa obsahu"], find: `${d} veta`,
+          hints: ["Vety podľa obsahu: oznamovacia, opytovacia, rozkazovacia, želacia a zvolacia.", "Želacia veta vyjadruje želanie (kiežby, nech, keby tak), zvolacia silný cit alebo údiv (Aký nádherný výhľad!).", "Pomôže aj interpunkčné znamienko na konci, ale rozhoduje obsah vety."],
           errors: { otherType: "Táto veta je iného druhu." }, steps: [`${d}: obsah a zámer vety`] });
       }
       if (k === 1) {
@@ -2583,7 +2649,7 @@ details.passage[open] summary::after{content:"skryť"}
   const SYN = [["rýchly", "svižný"], ["smelý", "odvážny"], ["pekný", "krásny"], ["smutný", "zarmútený"], ["hovoriť", "vravieť"], ["pozerať", "hľadieť"], ["bežať", "utekať"], ["múdry", "rozumný"], ["začiatok", "počiatok"], ["priateľ", "kamarát"], ["plakať", "nariekať"], ["dom", "príbytok"], ["spať", "driemať"], ["veselý", "radostný"]];
   const ANT = [["veľký", "malý"], ["tichý", "hlučný"], ["starý", "mladý"], ["svetlo", "tma"], ["pravda", "lož"], ["začiatok", "koniec"], ["rýchly", "pomalý"], ["bohatý", "chudobný"], ["ťažký", "ľahký"], ["teplý", "studený"], ["otvoriť", "zatvoriť"], ["víťazstvo", "prehra"], ["vysoký", "nízky"], ["hlboký", "plytký"], ["suchý", "mokrý"], ["zaujímavý", "nudný"]];
   const CUD = [["exteriér", "vonkajšok"], ["interiér", "vnútrajšok"], ["konflikt", "spor"], ["ilúzia", "klam"], ["aktuálny", "súčasný"], ["absolútny", "úplný"], ["variant", "možnosť"], ["pozitívny", "kladný"], ["negatívny", "záporný"], ["fiktívny", "vymyslený"], ["kooperácia", "spolupráca"], ["prioritný", "prednostný"], ["unikátny", "jedinečný"], ["minimálny", "najmenší"], ["maximálny", "najväčší"], ["akceptovať", "prijať"], ["eliminovať", "odstrániť"], ["optimista", "človek, ktorý verí v dobrý koniec"]];
-  const FRAZ = [["mať maslo na hlave", "mať niečo na svedomí"], ["chodiť okolo horúcej kaše", "vyhýbať sa podstate veci"], ["hádzať hrach na stenu", "márne niekoho presviedčať"], ["robiť z komára somára", "zveličovať"], ["ísť s kožou na trh", "riskovať"], ["byť v siedmom nebi", "byť veľmi šťastný"], ["držať jazyk za zubami", "mlčať, neprezradiť tajomstvo"], ["mať hlavu v oblakoch", "snívať, byť duchom neprítomný"], ["kúpiť mačku vo vreci", "kúpiť niečo bez prezretia"], ["zložiť ruky do lona", "nič nerobiť"], ["mať zlaté ruky", "byť zručný"], ["pustiť niečo jedným uchom dnu a druhým von", "nevšímať si, čo kto hovorí"]];
+  const FRAZ = [["mať maslo na hlave", "mať niečo na svedomí"], ["chodiť okolo horúcej kaše", "vyhýbať sa podstate veci"], ["hádzať hrach na stenu", "márne niekoho presviedčať"], ["robiť z komára somára", "zveličovať"], ["ísť s kožou na trh", "riskovať"], ["byť v siedmom nebi", "byť veľmi šťastný"], ["držať jazyk za zubami", "mlčať, neprezradiť tajomstvo"], ["mať hlavu v oblakoch", "snívať, byť duchom neprítomný"], ["kúpiť mačku vo vreci", "kúpiť niečo bez prezretia"], ["zložiť ruky do lona", "prestať sa usilovať, zostať nečinný"], ["mať zlaté ruky", "byť zručný"], ["pustiť niečo jedným uchom dnu a druhým von", "nevšímať si, čo kto hovorí"]];
   add({
     id: "s-lexika", slot: "s-lexika", level: "Porozumenie",
     gen() {
@@ -2626,16 +2692,16 @@ details.passage[open] summary::after{content:"skryť"}
       const yes = Math.random() < 0.7;
       return MC({ q: yes ? "V ktorom slove tvorí spoluhláska r, ŕ, l alebo ĺ slabiku (je slabikotvorná)?" : "V ktorom slove NIE JE slabikotvorná spoluhláska r, ŕ, l ani ĺ?", correct: yes ? pick(SLAB) : pick(NSLAB), wrongs: sample(yes ? NSLAB : SLAB, 3), wid: yes ? "notSyll" : "syll",
         given: ["štyri slová"], find: "slabikotvorné r, l",
-        hints: ["Slabiku tvorí zvyčajne samohláska. Ak v slabike samohláska nie je, môže ju tvoriť r, ŕ, l, ĺ.", "Rozdeľ slová na slabiky: vl-na, prst, srd-ce.", "Ak je r alebo l hneď vedľa samohlásky (brat, hla-va), slabiku netvorí."],
+        hints: ["Slabiku tvorí zvyčajne samohláska. Ak v slabike samohláska nie je, jej jadrom môže byť r, ŕ, l, ĺ.", "Slabikotvorné r, ŕ, l, ĺ stoja medzi spoluhláskami: krv, vŕba, vlk, stĺp.", "Ak je r alebo l hneď vedľa samohlásky (brat, hla-va), slabiku netvorí."],
         errors: { notSyll: "V tomto slove tvorí slabiku samohláska, nie r ani l.", syll: "V tomto slove je r alebo l slabikotvorné." },
-        steps: ["slabikotvorné r, ŕ, l, ĺ stoja medzi spoluhláskami alebo na konci slova po spoluhláske (vl-na, prst, krv)"] });
+        steps: ["slabikotvorné r, ŕ, l, ĺ tvoria jadro slabiky a stoja medzi spoluhláskami: krv, vŕba, vlk, stĺp (v slove krv je r medzi k a v)"] });
     }
   });
 
   // ================= LITERATÚRA =================
   const FOLK = {
     "príslovie": ["Kto druhému jamu kope, sám do nej padne.", "Bez práce nie sú koláče.", "Lepší vrabec v hrsti ako holub na streche.", "Komu niet rady, tomu niet pomoci.", "Ráno múdrejšie večera.", "Trpezlivosť ruže prináša."],
-    "porekadlo": ["Ide mu to ako psovi pečenie.", "Je zdravý ako buk.", "Hľadá ihlu v kope sena.", "Nosí drevo do lesa.", "Je chudobný ako kostolná myš.", "Pozerá ako teľa na nové vráta."],
+    "porekadlo": ["Nosí drevo do lesa."],
     "pranostika": ["Medardova kvapka štyridsať dní kvapká.", "Katarína na blate, Vianoce na ľade.", "Svätý Martin prichádza na bielom koni."],
     "hádanka": ["Má zuby, a nehryzie. (hrebeň)", "Čím viac z nej berieš, tým je väčšia. (jama)", "Visí na stene, tiká a nikdy nejde von. (hodiny)", "Bez nôh beží, bez úst šumí. (potok)"]
   };
@@ -2645,7 +2711,7 @@ details.passage[open] summary::after{content:"skryť"}
       const keys = Object.keys(FOLK), k = pick(keys), ex = pick(FOLK[k]);
       return MC({ text: `„${ex}“`, q: "Ktorý žáner ľudovej slovesnosti predstavuje ukážka?", correct: k, wrongs: keys.filter((x) => x !== k), wid: "otherGenre",
         given: [ex], find: "žáner ľudovej slovesnosti",
-        hints: ["Príslovie je celá veta s ponaučením, ktoré platí všeobecne.", "Porekadlo len obrazne pomenúva alebo hodnotí človeka či situáciu, nepoúča (často prirovnanie).", "Pranostika predpovedá počasie podľa dní v kalendári, hádanka opisuje predmet a čaká odpoveď."],
+        hints: ["Príslovie je celá veta s ponaučením, ktoré platí všeobecne.", "Porekadlo obrazne pomenúva konanie alebo situáciu, ale nepoúča (Nosí drevo do lesa = robí zbytočnú vec).", "Pranostika predpovedá počasie podľa dní v kalendári, hádanka opisuje predmet a čaká odpoveď."],
         errors: { otherGenre: "Ukážka nemá znaky tohto žánru." }, steps: [`${k}: ${ex}`] });
     }
   });
@@ -2654,7 +2720,7 @@ details.passage[open] summary::after{content:"skryť"}
     "povesť": ["Rozprávanie viazané na skutočné miesto alebo historickú osobnosť, v ktorom sa skutočnosť mieša s fantáziou.", "Ľudia z okolia hradu dodnes rozprávajú, že v hradnej studni je ukrytý poklad pána hradu. Kto ho chcel vytiahnuť, toho studňa vraj stiahla pod zem."],
     "rozprávka": ["Príbeh s nadprirodzenými bytosťami a čarami, v ktorom dobro víťazí nad zlom.", "Kde bolo, tam bolo, za siedmimi horami žil chudobný mládenec. Raz v lese pomohol starenke a tá mu za odmenu darovala prsteň, ktorý plnil tri želania."],
     "detektívka": ["Próza, v ktorej vyšetrovateľ logickým uvažovaním odhaľuje páchateľa zločinu.", "Inšpektorka si ešte raz prezrela stopy na koberci. „Zlodej mal mokré topánky, hoci celý deň nepršalo,“ povedala potichu. „Musel prísť od jazera.“"],
-    "vedecko-fantastický príbeh": ["Próza o budúcnosti, technike a vesmíre, ktorá vychádza z vedeckých poznatkov.", "Loď Aurora sa po troch rokoch letu priblížila k planéte so zelenými oceánmi. Palubný počítač oznámil, že vzduch je dýchateľný."],
+    "vedecko-fantastická literatúra": ["Próza o budúcnosti, technike a vesmíre, ktorá vychádza z vedeckých poznatkov.", "Loď Aurora sa po troch rokoch letu priblížila k planéte so zelenými oceánmi. Palubný počítač oznámil, že vzduch je dýchateľný."],
     "cestopis": ["Autor opisuje cestu a zážitky z krajín a miest, ktoré navštívil.", "Na tretí deň cesty sme dorazili do prístavu. Trh voňal korením a rybami a predavači sa nás snažili prekričať v piatich jazykoch."],
     "balada": ["Lyricko-epická báseň s pochmúrnym dejom, často s tragickým koncom.", null],
     "komédia": ["Dramatický žáner so šťastným koncom, ktorý zosmiešňuje ľudské chyby.", null],
@@ -2675,20 +2741,29 @@ details.passage[open] summary::after{content:"skryť"}
     }
   });
   const PROST = {
-    "prirovnanie": ["Oči mala modré ako letné nebo.", "Mesto sa po búrke lesklo ako zrkadlo.", "Ticho bolo husté ako hmla."],
-    "personifikácia": ["Vietor si za oknom pospevoval.", "Stromy sa ukláňali slnku.", "Starý dom si pamätal každý krok."],
-    "metafora": ["V záhrade kvitol sneh čerešní.", "Hviezdy sú gombíky noci.", "Nad mestom horel večer."],
-    "básnický prívlastok (epiteton)": ["Pod oknom kvitne snehobiela ruža.", "Na nebi svieti strieborný mesiac.", "Pod brezami šumí čarovný potok."],
-    "hyperbola (zveličenie)": ["Čakal som na teba tisíc rokov.", "Povedal som ti to už stokrát.", "Mám toľko úloh, že ich nestihnem do smrti."],
-    "rečnícka otázka": ["Kto by nemal rád leto?", "Čo je krajšie ako domov?", "Ktože by sa nebál búrky?"],
-    "zvukomaľba": ["Kvapky na plechu: cink, cink, cink.", "Šuchu-šuchu, šuchoce lístie pod nohami.", "Bum! Bác! a skriňa bola na zemi."],
-    "anafora": ["Pre teba spievam, pre teba žijem, pre teba snívam.", "Ani slovo, ani pohľad, ani úsmev."]
+    "prirovnanie": ["Oči mala modré **ako letné nebo**.", "Mesto sa po búrke lesklo **ako zrkadlo**.", "Ticho bolo husté **ako hmla**."],
+    "personifikácia": ["Vietor si za oknom **pospevoval**.", "Stromy sa **ukláňali** slnku.", "Starý dom si **pamätal** každý krok."],
+    "metafora": ["V záhrade kvitol **sneh čerešní**.", "Hviezdy sú **gombíky noci**.", "Nad mestom **horel večer**."],
+    "básnický prívlastok (epiteton)": ["Pod oknom kvitne **snehobiela** ruža.", "Na nebi svieti **strieborný** mesiac.", "Pod brezami šumí **čarovný** potok."],
+    "hyperbola (zveličenie)": ["Čakal som na teba **tisíc rokov**.", "Povedal som ti to už **stokrát**.", "Mám toľko úloh, že ich **nestihnem do smrti**."],
+    "rečnícka otázka": ["**Kto by nemal rád leto?**", "**Čo je krajšie ako domov?**", "**Ktože by sa nebál búrky?**"],
+    "zvukomaľba": ["Kvapky na plechu: **cink, cink, cink**.", "**Šuchu-šuchu**, šuchoce lístie pod nohami.", "**Bum! Bác!** a skriňa bola na zemi."],
+    "anafora": ["**Pre teba** spievam, **pre teba** žijem, **pre teba** snívam.", "**Ani** slovo, **ani** pohľad, **ani** úsmev."]
   };
+  // básnické prívlastky na vypísanie (každá úloha má jednu jednoznačnú odpoveď)
+  const EPI = [["Nad lúkou visí zamatová tma.", "zamatová", "tma"], ["Na nebi svieti strieborný mesiac.", "strieborný", "mesiac"], ["Pod brezami šumí čarovný potok.", "čarovný", "potok"]];
   add({
     id: "s-prostriedky", slot: "s-prostriedky", level: "Analýza",
     gen() {
       const keys = Object.keys(PROST), k = pick(keys), ex = pick(PROST[k]);
-      return MC({ text: `„${ex}“`, q: "Ktorý umelecký prostriedok je v ukážke?", correct: k, wrongs: sample(keys.filter((x) => x !== k), 3), wid: "other",
+      if (Math.random() < 0.25) {
+        const [v, a, n] = pick(EPI);
+        return OPEN({ text: `„${v}“`, q: `Vypíš z verša básnický prívlastok (epiteton), ktorý rozvíja slovo ${n}.`, accept: [a], cs: false, wrongs: [{ v: n, id: "noun" }],
+          given: [v], find: "básnický prívlastok",
+          hints: ["Básnický prívlastok (epiteton) je umelecké prídavné meno, ktoré podstatnému menu dodáva obraznú vlastnosť.", `Polož otázku: aký je ${n}? aká je ${n}? aké sú ${n}?`, "Vypíš len jedno slovo – prídavné meno."],
+          errors: { noun: "Toto je podstatné meno, ktoré prívlastok rozvíja. Hľadá sa prídavné meno pred ním." }, steps: [`${a} ${n} → básnický prívlastok: ${a}`] });
+      }
+      return MC({ text: `„${ex}“`, q: "Ktorý umelecký prostriedok predstavuje zvýraznený výraz?", correct: k, wrongs: sample(keys.filter((x) => x !== k), 3), wid: "other",
         given: [ex], find: "umelecký prostriedok",
         hints: ["Prirovnanie spája dve veci slovom ako. Personifikácia dáva veciam a prírode ľudské vlastnosti.", "Metafora prenáša pomenovanie na základe podobnosti, bez slova ako. Hyperbola zveličuje.", "Rečnícka otázka nečaká odpoveď, anafora opakuje slovo na začiatku, zvukomaľba napodobňuje zvuky."],
         errors: { other: "V ukážke nie je tento umelecký prostriedok." }, steps: [`${k}: ${ex}`] });
@@ -2698,7 +2773,7 @@ details.passage[open] summary::after{content:"skryť"}
     { s: "združený", l: ["Ráno sa dvíha hmla z lúk,", "v diaľke sa ozve vtáčí zvuk,", "slnko sa smeje na celý svet,", "na stráni rozkvitol prvý kvet."], r: ["lúk", "zvuk"] },
     { s: "združený", l: ["Vlak sa už pomaly pohol,", "mával som, kým som len mohol,", "za oknom bežia polia, lesy,", "v diaľke sa trblietajú plesy."], r: ["lesy", "plesy"] },
     { s: "striedavý", l: ["Na okná kreslí biely mráz", "ľadový, krehký, tichý kvet,", "a ráno prekvapí aj nás,", "že krásny vie byť zimný svet."], r: ["mráz", "nás"] },
-    { s: "striedavý", l: ["Prichádza ticho letná noc,", "nad riekou blikajú hviezdy,", "a mesiac má tú zvláštnu moc,", "že stíši aj hluk nočnej jazdy."], r: ["noc", "moc"] },
+    { s: "striedavý", l: ["Prichádza ticho letná noc,", "v záhrade zatvára kvety,", "a mesiac má tú zvláštnu moc,", "že spája vzdialené svety."], r: ["noc", "moc"] },
     { s: "obkročný", l: ["Na kraji lesa stojí dom,", "v okne mu blikne svetlo malé", "a vo dne v noci, verne, stále", "čaká, kto zastaví sa v ňom."], r: ["malé", "stále"] },
     { s: "obkročný", l: ["Za dedinou sa zelená les,", "v korunách stromov spieva vták,", "a ja sa usmievam len tak,", "veď je tak krásne práve dnes."], r: ["vták", "tak"] },
     { s: "prerývaný", l: ["Snehuliak stojí na dvore,", "má mrkvu namiesto nosa,", "no keď sa slniečko usmeje,", "ostane po ňom len rosa."], r: ["nosa", "rosa"] },
@@ -2850,7 +2925,7 @@ details.passage[open] summary::after{content:"skryť"}
         mc({ q: "Čo prezradí robotnica ostatným včelám tancom v tvare osmičky?", correct: "že zdroj potravy je ďaleko", wrongs: ["že zdroj potravy je hneď pri úli", "že sa blíži nebezpečenstvo", "že matka práve kladie vajíčka"], steps: ["ďaleko → osmička s kývaním bruškom"] }),
         op({ q: "Vypíš z prvého odseku slovo, ktoré označuje ľudí, ktorí chovajú včely.", accept: ["včelári", "včelár"], hints: ["Hľadaj v prvej vete.", "Slovo je odvodené od slova včela.", "Vypíš ho v tvare z textu."], steps: ["včelári"] }),
         op({ slot: "s-slovne-druhy", q: "Vypíš z tretieho odseku osobné zámeno.", accept: ["Ich", "ich"], cs: false, hints: ["Zámeno zastupuje podstatné meno.", "V treťom odseku zastupuje slovo trúdy.", "Je na začiatku tretej vety."], steps: ["Ich (= trúdov)"] }),
-        mc({ slot: "s-syntax", level: "Analýza", q: "Akým vetným členom je slovo robotnice vo vete „robotnice ich z úľa vyženú“?", correct: "podmet", wrongs: ["predmet", "prísudok", "prívlastok"], hints: ["Kto vyženie trúdy z úľa?", "Podmet odpovedá na otázku kto? čo? a je v 1. páde.", "Prísudok je vyženú."], steps: ["kto vyženie? robotnice → podmet"] }),
+        mc({ slot: "s-syntax", level: "Analýza", q: "Akým vetným členom je slovo robotnice vo vete „robotnice ich z úľa vyženú“?", correct: "podmet", wrongs: ["predmet", "prísudok", "prívlastok"], hints: ["Kto vyženie trúdy z úľa?", "Podmet odpovedá na otázku kto? čo? a je v nominatíve.", "Prísudok je vyženú."], steps: ["kto vyženie? robotnice → podmet"] }),
         mc({ slot: "s-slovne-druhy", level: "Analýza", q: "Akým slovným druhom je slovo keď vo vete „Keď sa leto skončí, robotnice ich vyženú“?", correct: "spojka", wrongs: ["príslovka", "predložka", "častica"], hints: ["Slovo spája dve vety do súvetia.", "Predložka by stála pred podstatným menom.", "Slová, ktoré spájajú vety, sú spojky."], steps: ["keď spája vedľajšiu vetu s hlavnou → spojka"] })
       ];
     }
@@ -2898,7 +2973,7 @@ details.passage[open] summary::after{content:"skryť"}
         mc({ slot: "s-u-zamer", q: "Aký slohový útvar je ukážka?", correct: "správa", wrongs: ["pozvánka", "opis pracovného postupu", "úvaha", "bájka"], hints: ["Text informuje o udalosti, ktorá sa stala.", "Odpovedá na otázky kto, čo, kde, kedy, prečo.", "Obsahuje aj vyjadrenia ľudí, ktorých sa udalosť týka."] }),
         op({ slot: "s-prostriedky", q: "Vypíš zo štvrtého odseku prirovnanie (aj so slovom, ku ktorému sa vzťahuje).", accept: ["tvrdá ako kameň", "zem bola tvrdá ako kameň", "ako kameň"], cs: false, hints: ["Prirovnanie spája dve veci slovom ako.", "Hľadaj vo vete, ktorú povedal Marek.", "Čomu sa podobala zem?"], steps: ["tvrdá ako kameň"] }),
         mc({ slot: "s-slovne-druhy", level: "Analýza", q: "Akým slovným druhom je slovo najprv vo vete „Žiaci najprv vyčistili sad od náletových drevín a odpadu“?", correct: "príslovka", wrongs: ["prídavné meno", "spojka", "častica"], hints: ["Na akú otázku slovo odpovedá? Kedy vyčistili sad?", "Slovo rozvíja sloveso vyčistili a nespája vety ani slová.", "Neohybné plnovýznamové slovo, ktoré odpovedá na otázku kedy?, je príslovka."], steps: ["vyčistili kedy? najprv → príslovka (času)"] }),
-        mc({ slot: "s-syntax", level: "Analýza", q: "Akým vetným členom je slovo obec vo vete „Obec už prisľúbila, že k sadu umiestni lavičky“?", correct: "podmet", wrongs: ["predmet", "príslovkové určenie", "prívlastok"], hints: ["Kto prisľúbil?", "Podmet je v 1. páde.", "Prísudok je prisľúbila."], steps: ["kto prisľúbil? obec → podmet"] }),
+        mc({ slot: "s-syntax", level: "Analýza", q: "Akým vetným členom je slovo obec vo vete „Obec už prisľúbila, že k sadu umiestni lavičky“?", correct: "podmet", wrongs: ["predmet", "príslovkové určenie", "prívlastok"], hints: ["Kto prisľúbil?", "Podmet je v nominatíve.", "Prísudok je prisľúbila."], steps: ["kto prisľúbil? obec → podmet"] }),
         op({ slot: "s-lexika", q: "Vypíš z tretieho odseku sloveso, ktoré označuje spôsob štepenia ovocného stromu.", accept: ["vrúbľujú", "vrúbľovať"], hints: ["Hľadaj vo vete o odborníkoch z ovocinárskeho spolku.", "Je to odborné slovo z ovocinárstva.", "Je spojené so strihaním stromov."], steps: ["vrúbľujú"] }),
         mc({ slot: "s-velke", q: "V ktorej možnosti je názov obce z ukážky napísaný správne v inom páde?", correct: "do Lipového Hája", wrongs: ["do lipového Hája", "do Lipového hája", "do lipového hája"], hints: ["Názvy obcí píšeme s veľkými písmenami pri každom slove.", "Platí to aj pri skloňovaní.", "Porovnaj s prvým odsekom."], steps: ["Lipový Háj → do Lipového Hája"] })
       ];
@@ -2979,7 +3054,7 @@ details.passage[open] summary::after{content:"skryť"}
     id: "r-jalovica", kind: "umelecký", cat: "próza", title: "Rysavá jalovica (úryvok)",
     source: { author: "Martin Kukučín", work: "Rysavá jalovica", year: "1885", note: "Úryvok z 2. kapitoly", from: "eknizky.sk", url: "https://eknizky.sk", license: "Licencia CC BY-NC 4.0" },
     intro: "Adam Krt prišiel na jarmok do Mrhanova predať kapce, ktoré v zime ušil. Za päťdesiatku, ktorú mu dala žena Eva, má kúpiť kravu. Všetky kapce predal a vypil si pohárik rozolišu.",
-    gloss: [["kapce", "súkenná obuv"], ["rozoliš", "sladký liehový nápoj"], ["čugaňa", "dlhá palica"], ["vemä", "vemeno"], ["obrúčky na rohoch", "krúžky, podľa ktorých sa určuje vek kravy"], ["rebrina", "chudé, staré zviera"], ["hvizdák", "tu: medzera po chýbajúcom zube"], ["dojka", "dobrá dojnica"], ["kupčiť", "obchodovať, handlovať"], ["hrachovina", "tu: stará, bezcenná krava"]],
+    gloss: [["kapce", "súkenná obuv"], ["rozoliš", "sladký liehový nápoj"], ["čugaňa", "dlhá palica"], ["vemä", "vemeno"], ["obrúčky na rohoch", "krúžky, podľa ktorých sa určuje vek kravy"], ["rebrina", "chudé, staré zviera"], ["hvizdák", "medzera po chýbajúcom zube"], ["dojka", "dobrá dojnica"], ["kupčiť", "obchodovať, handlovať"], ["hrachovina", "hrachová vňať; tu hanlivo o starej krave"]],
     predict: { after: 2, q: "Zastavme sa. Čo myslíš, odhalí Krt, že krava je v skutočnosti stará?", options: ["áno, všimne si chýbajúci zub a kravu nekúpi", "nie, predavač ho presvedčí, že krava je mladá", "áno, ale kúpi ju za polovičnú cenu", "predavač sa mu sám prizná"], reveal: "Krt si síce všimne, že krave chýba zub, ale predavač ho rýchlo presvedčí, že krava je mladá a zuby jej len vypadávajú. Krt mu uverí všetko „do litery“. Rozprávač pritom čitateľovi prezradí, že Šmálok je podvodník." },
     paras: [
       "Keď sa takto posilnil, hneď veselšie zahadzoval sa na dlhej čugani ku kravám.",
@@ -3109,7 +3184,7 @@ details.passage[open] summary::after{content:"skryť"}
         op({ slot: "s-prostriedky", q: "Vypíš z prvej vety prirovnanie, ktoré vyjadruje, ako si kráľ dcéry chránil.", accept: ["ako oči v hlave", "varoval ako oči v hlave", "si varoval ako oči v hlave"], cs: false, hints: ["Prirovnanie spája dve veci slovom ako.", "Je hneď v prvej vete ukážky.", "Čo si človek chráni najviac?"], steps: ["varoval ako oči v hlave"] }),
         op({ slot: "s-u-explicit", level: "Porozumenie", q: "Vypíš z ukážky meno najmladšej dcéry.", accept: ["Maruška"], hints: ["Meno sa prvý raz objaví, keď odpovedá najmladšia dcéra.", "Je to zdrobnené meno.", "Vlastné meno píš s veľkým písmenom."], steps: ["Maruška"] }),
         mc({ slot: "s-lexika", q: "Čo znamená v ukážke slovo driečne („všetky boli driečne“)?", correct: "pekné, urastené", wrongs: ["drzé, neposlušné", "smutné", "lenivé"], hints: ["Dosaď každú možnosť do vety.", "Kráľovi sa ťažko vyberalo, lebo všetky boli…", "Je to kladná vlastnosť."], steps: ["driečny = pekný, urastený"] }),
-        mc({ slot: "s-syntax", level: "Analýza", q: "Akým vetným členom je slovo kráľ vo vete „Jeden kráľ mal tri dievky“?", correct: "podmet", wrongs: ["predmet", "prísudok", "prívlastok"], hints: ["Kto mal tri dievky?", "Podmet odpovedá na otázku kto? čo? a je v 1. páde.", "Prísudok je mal."], steps: ["kto mal? kráľ → podmet"] })
+        mc({ slot: "s-syntax", level: "Analýza", q: "Akým vetným členom je slovo kráľ vo vete „Jeden kráľ mal tri dievky“?", correct: "podmet", wrongs: ["predmet", "prísudok", "prívlastok"], hints: ["Kto mal tri dievky?", "Podmet odpovedá na otázku kto? čo? a je v nominatíve.", "Prísudok je mal."], steps: ["kto mal? kráľ → podmet"] })
       ];
     }
   });
@@ -3174,7 +3249,7 @@ details.passage[open] summary::after{content:"skryť"}
         mc({ level: "Analýza", q: "Čo vyjadrujú obrazy trávnička a ruže na hroboch?", correct: "Ich láska pretrvá aj po smrti.", wrongs: ["Manželia sa boja smrti.", "Manželia radi pracujú v záhrade.", "Hrob treba udržiavať, aby nezarástol."], hints: ["Kedy rastú kvety na hrobe? Keď už človek nežije.", "Ako sa volá tá rastlina v poslednom verši strofy? „…on je láska tvojej ženy.“", "Rastlina tu je znamením niečoho, čo nezanikne."], steps: ["trávniček = láska ženy, ruža = láska muža → láska presahuje smrť"] }),
         mc({ slot: "s-prostriedky", level: "Analýza", q: "Ktorý umelecký prostriedok je vo verši „jak holub mi hudie“?", correct: "prirovnanie", wrongs: ["metafora", "rečnícka otázka", "hyperbola"], hints: ["Slovo jak znamená ako.", "Muž sa porovnáva s holubom.", "Porovnanie so slovom ako je…"], steps: ["jak (= ako) holub → prirovnanie"] }),
         mc({ slot: "s-prostriedky", level: "Analýza", q: "Ktorý umelecký prostriedok je vo veršoch o ruži „bude hlávku kloniť, bôľom kvietky roniť“?", correct: "personifikácia", wrongs: ["prirovnanie", "rečnícka otázka", "zvukomaľba"], hints: ["Môže ruža cítiť bôľ (žiaľ)?", "Ruža tu koná ako smutný človek.", "Ľudské vlastnosti pripísané rastline…"], steps: ["ruža kloní hlávku a smúti → personifikácia"] }),
-        mc({ slot: "s-vers", level: "Analýza", q: "Čím sa navzájom podobajú časti nazvané Ona a On?", correct: "Majú rovnakú stavbu a líšia sa len niekoľkými slovami.", wrongs: ["Sú napísané v próze.", "On odpovedá na otázky, ktoré kladie Ona.", "Časť On je dvakrát dlhšia."], hints: ["Porovnaj prvé verše oboch častí.", "Ktoré slová sa zmenili? mužíček – ženička, holub – holúbka…", "Opakovanie rovnakej stavby sa volá paralelizmus."], steps: ["Dobre mi, dobre mi — mužíček / ženička šepce mi… → rovnaká stavba"] }),
+        mc({ slot: "s-vers", level: "Analýza", q: "Porovnaj časti Ona a On. Čo majú spoločné v obsahu a v usporiadaní veršov?", correct: "Obaja hovoria o láske až za hrob a verše sú usporiadané rovnako, mení sa len niekoľko slov.", wrongs: ["Obe sú napísané v próze, bez veršov.", "On odpovedá na otázky, ktoré kladie Ona.", "Ona hovorí o smútku, On o hneve."], hints: ["Porovnaj prvé verše oboch častí.", "Ktoré slová sa zmenili? mužíček – ženička, holub – holúbka…", "Ktoré myšlienky sa v oboch častiach opakujú?"], steps: ["rovnaký obsah (láska až za hrob) aj rovnaké usporiadanie veršov: mužíček / ženička, holub / holúbka, trávniček / ruža"] }),
         mc({ q: "Akú náladu má pieseň?", correct: "radostnú, zamilovanú", wrongs: ["smutnú, žalostnú", "nahnevanú", "strašidelnú"], hints: ["Ako sa začínajú všetky tri časti?", "„Dobre mi, dobre mi… Dobre nám, sladko nám…“", "O čom si manželia spievajú?"], steps: ["„Dobre nám, sladko nám“ → radosť a láska"] }),
         op({ slot: "s-lexika", q: "Vypíš z prvej strofy zdrobneninu, ktorou žena nazýva svojho muža.", accept: ["mužíček"], cs: false, hints: ["Zdrobnenina je slovo s príponou, ktorá vyjadruje malosť alebo nehu.", "Je hneď v prvom verši.", "Je odvodená od slova muž."], steps: ["muž → mužíček"] }),
         op({ slot: "s-vers", q: "Vypíš z prvej strofy slovo, ktoré sa rýmuje so slovom hudie.", accept: ["bude"], cs: false, hints: ["Rým je zvuková zhoda na konci slov.", "Hľadaj na konci druhého alebo tretieho verša.", "Ktoré slovo znie na konci podobne ako -udie?"], steps: ["hudie – bude"] })
@@ -3218,7 +3293,7 @@ const {SLOTS,TEMPLATES,makeTask,checkOpen,fmt,pick,shuffle}=window.T9;
    Prázdne = tutor beží v režime bez AI (pripravené nápovedy). */
 const CONFIG=Object.assign({ tutorUrl:"", reportEmail:"", sessionLen:10, testDate:"2027-03-17" }, window.T9_CONFIG||{});
 if(/TVOJ-|XXX/.test(CONFIG.tutorUrl))CONFIG.tutorUrl="";
-const APP_VERSION="2026-10-11";
+const APP_VERSION="2026-10-14";
 
 const $=(s,r=document)=>r.querySelector(s);
 const esc=(s)=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -3256,11 +3331,67 @@ function passageHTML(p,upto){
 const passCat=p=>p.cat||(p.kind==="umelecký"?(p.poem?"poézia":"próza"):"vecný");
 let X=null; // test nanečisto
 
+/* --- denná misia, séria a body (len v tomto zariadení) --- */
+const ymd=(d)=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=()=>ymd(new Date()), yesterday=()=>ymd(new Date(Date.now()-864e5));
+function streakNow(){return store.lastMission===today()||store.lastMission===yesterday()?(store.streak||0):0}
+function addXP(n){if(!n)return;store.xp=(store.xp||0)+n;if(S)S.xpGain=(S.xpGain||0)+n;save()}
+const levelOf=(xp)=>Math.floor(xp/100)+1;
+const daysWord=(n)=>n===1?"deň":n>=2&&n<=4?"dni":"dní";
+function daysLeft(){return Math.max(0,Math.ceil((new Date(CONFIG.testDate+"T08:00:00")-new Date())/864e5))}
+function weakest(){return Object.keys(store.slots).filter(id=>SLOTS[id]&&store.slots[id].n>=2&&TEMPLATES.some(t=>t.slot===id)).map(id=>[id,mastery(id)]).filter(x=>x[1]<85).sort((a,b)=>a[1]-b[1]).slice(0,3)}
+function startMission(){S={f:{mission:true},i:0,results:[],recent:[],len:10,sub:"MAT",xpGain:0,seen:[]};nextTask()}
+const COVER_ART=`<svg class="cv-svg" viewBox="0 0 300 230" aria-hidden="true"><defs><pattern id="cvg" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0V14" fill="none" stroke="#33449A" stroke-width="1"/></pattern><linearGradient id="cvf" x1="0" x2="1"><stop offset="0" stop-color="#E3F25A"/><stop offset="1" stop-color="#B8F06A"/></linearGradient></defs>
+<g transform="rotate(-4 150 115)"><rect x="34" y="26" width="226" height="178" rx="18" fill="#141F4A" stroke="#33449A"/><rect x="34" y="26" width="226" height="178" rx="18" fill="url(#cvg)" opacity=".75"/></g>
+<path class="cv-path" d="M64 182 C 100 182, 98 146, 128 142 S 170 120, 176 100 S 206 76, 214 62" fill="none" stroke="#E3F25A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="64" cy="182" r="11" fill="#2443DB" stroke="#fff" stroke-width="2"/><path d="M59 182l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="128" cy="142" r="11" fill="#2443DB" stroke="#fff" stroke-width="2"/><path d="M123 142l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="176" cy="100" r="9" fill="#141F4A" stroke="#E3F25A" stroke-width="2.5"/>
+<line x1="216" y1="64" x2="216" y2="22" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M217 23h38l-8 10 8 10h-38z" fill="url(#cvf)"/><text x="228" y="38" font-family="JetBrains Mono,monospace" font-weight="700" font-size="12" fill="#0E1630">T9</text>
+<g class="cv-float"><text x="246" y="104" font-family="Georgia,serif" font-style="italic" font-size="30" fill="#8FA4FF">π</text></g>
+<g class="cv-float d2"><text x="44" y="78" font-family="JetBrains Mono,monospace" font-size="21" fill="#AEB9DD">√x</text></g>
+<g class="cv-float d3"><text x="238" y="186" font-family="Georgia,serif" font-size="25" fill="#E3F25A">Aa</text></g>
+<g class="cv-float d2" transform="translate(98 52)"><path d="M0 8 Q 14 2 28 8 Q 42 2 56 8 V 40 Q 42 34 28 40 Q 14 34 0 40Z" fill="#F2F4EF"/><path d="M28 8V40" stroke="#8A95AA" stroke-width="1.5"/><path d="M6 16h16M6 22h16M6 28h12M34 16h16M34 22h16M34 28h12" stroke="#8A95AA" stroke-width="1.4"/></g>
+</svg>`;
+const ICON={
+  mission:`<svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="none" stroke="var(--primary)" stroke-width="2"/><circle cx="13" cy="13" r="6" fill="none" stroke="var(--primary)" stroke-width="2"/><circle cx="13" cy="13" r="2" fill="var(--primary)"/></svg>`,
+  tutor:`<svg viewBox="0 0 26 26" aria-hidden="true"><path d="M4 6h18v11H11l-5 4v-4H4z" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5h8" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/></svg>`,
+  book:`<svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 6q5-2 10 1q5-3 10-1v14q-5-2-10 1q-5-3-10-1z" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/><path d="M13 7v14" stroke="var(--primary)" stroke-width="2"/></svg>`
+};
+const FLAME=`<svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4c2 7 10 10 10 20a10 10 0 0 1-20 0c0-5 3-8 5-10 0 4 2 6 4 6-2-6 0-11 1-16z" fill="#E3F25A"/><path d="M22 22c1 3 5 4 5 9a5 5 0 0 1-10 0c0-3 2-5 3-6 0 2 1 3 2 3-1-2 0-4 0-6z" fill="#2443DB"/></svg>`;
+
 /* --- domov --- */
 function home(){
   closeTutor(); stopTimer(); X=null;
   const sj=SUBJ[SUB], isM=SUB==="MAT";
+  const xp=store.xp||0, st=streakNow(), done=store.missionDone===today(), wk=weakest();
   app.innerHTML=`
+  <section class="cover" aria-label="T9 Tréning">
+    <div class="cv-in">
+      <div class="cv-txt">
+        <div class="cv-eye">Matematika · Slovenčina · T9</div>
+        <h1>Testovanie 9 <span class="hl">bez stresu</span></h1>
+        <p>Úlohy podľa matice NIVaM, ktoré sa pri každom pokuse menia. Ukážky zo slovenskej klasiky. A tutor, ktorý ťa k výsledku navedie, ale nevyrieši ho za teba.</p>
+        <div class="cv-cta"><button class="btn cv-p" id="mission">${done?"Ďalšia misia":"Spustiť dennú misiu"}</button><button class="btn cv-s" id="totest">Test nanečisto</button></div>
+        <div class="cv-free">${done?"Dnešnú misiu máš splnenú. ":""}Zadarmo · bez registrácie · bez reklám</div>
+      </div>
+      <div class="cv-art">${COVER_ART}</div>
+    </div>
+    <div class="cv-stats">
+      <div><b>${daysLeft()}</b><span>dní do T9</span></div>
+      <div><b>${st}</b><span>${st===1?"deň":"dní"} v sérii</span></div>
+      <div><b>${xp}</b><span>bodov XP</span></div>
+      <div><b>${levelOf(xp)}</b><span>úroveň</span><i class="lv"><i style="width:${xp%100}%"></i></i></div>
+    </div>
+  </section>
+  <div class="feat">
+    <div>${ICON.mission}<strong>Denná misia</strong><span>10 úloh z oboch predmetov, asi 15 minút</span></div>
+    <div>${ICON.tutor}<strong>Tutor</strong><span>${CONFIG.tutorUrl?"AI tutor navádza otázkami, výsledok neprezradí":"navádza krok za krokom, výsledok neprezradí"}</span></div>
+    <div>${ICON.book}<strong>Klasika</strong><span>${PASS.filter(p=>p.source).length} ukážok z diel slovenskej literatúry</span></div>
+  </div>
+  <div class="sec-title"><h3>Tvoj plán</h3><span>${wk.length?"čo potrénovať najprv":"pripraví sa po prvých úlohách"}</span></div>
+  ${wk.length?`<div class="plan-list">${wk.map(([id,m])=>`<button class="plan-i" data-slot="${id}"><span class="pl-s">${SLOTS[id].subject}</span><span class="pl-n">${esc(SLOTS[id].name)}</span><span class="pl-m">${m} %</span></button>`).join("")}</div>`:`<p class="plan-empty">Začni dennou misiou. Aplikácia zistí, čo ti ide a čo treba potrénovať, a tu ti to pripraví.</p>`}
+  <div class="sec-title"><h3>Predmety</h3><span>tréning po blokoch a test nanečisto</span></div>
   <div class="subj" role="tablist" aria-label="Predmet">${Object.keys(SUBJ).map(k=>`<button role="tab" aria-selected="${k===SUB}" data-sub="${k}">${SUBJ[k].name}</button>`).join("")}</div>
   <section class="hero">
     <div class="eyebrow">${sj.name} · príprava na Testovanie 9</div>
@@ -3289,9 +3420,16 @@ function home(){
       ${can?`<button class="btn s train" data-slot="${id}">Trénovať</button>`:`<button class="btn s train" data-block="U">Ukážka</button>`}
       <div class="bar" role="progressbar" aria-label="Zvládnutie ${esc(SLOTS[id].name)}" aria-valuenow="${m}" aria-valuemin="0" aria-valuemax="100"><i style="width:${m}%"></i></div>
       <div class="src">${m} % · ako ${SLOTS[id].t9}</div></div>`}).join("")}</div></details>`).join("")}
+  <footer class="foot">
+    <details><summary>O projekte</summary><div class="fb-in"><p>T9 Tréning je bezplatná aplikácia pre Zavretú školu. Pomáha deviatakom pripraviť sa na Testovanie 9 z matematiky a zo slovenského jazyka a literatúry. Nie je to oficiálna stránka NIVaM.</p><p>Úlohy sú odvodené podľa testovacej matice NIVaM, nie skopírované z testov. Generátor pri každom pokuse mení čísla, situácie, vety a poradie možností.</p></div></details>
+    <details><summary>Ako overujeme obsah</summary><div class="fb-in"><ul><li>Výsledky matematických úloh počíta program, nie človek, a každý typ úlohy je automaticky otestovaný stovkami vygenerovaných variantov.</li><li>Slovenčinu sme overili podľa Pravidiel slovenského pravopisu a príručky Slovenčina v kocke a posúdila ju skúsená učiteľka slovenského jazyka.</li><li>Ukážky z literatúry sú prevzaté doslovne z elektronických vydaní a porovnané so zdrojom slovo po slove.</li><li>Pod každou úlohou nájdeš odkaz Nahlásiť chybu v úlohe. Každé hlásenie prečítame a úlohu opravíme.</li></ul></div></details>
+    <details><summary>Zdroje ukážok</summary><div class="fb-in"><ul>${PASS.filter(p=>p.source).map(p=>`<li>${srcLine(p)}</li>`).join("")}</ul></div></details>
+  </footer>
   <p class="note">Pre Zavretú školu. Pokrok sa ukladá len v tomto zariadení. ${CONFIG.tutorUrl?"Otázky pre AI tutora a hlásenia chýb sa odosielajú bez mena a iných osobných údajov.":"Tutor zatiaľ beží bez AI z pripravených nápovied, nič sa neodosiela."}</p>`;
   app.querySelectorAll("[data-sub]").forEach(b=>b.onclick=()=>{SUB=b.dataset.sub;store.subject=SUB;save();home()});
   $("#test").onclick=startTest;
+  $("#mission").onclick=startMission;
+  $("#totest").onclick=()=>{const c=$(".test-card");c.scrollIntoView({behavior:"smooth",block:"center"});c.classList.add("pulse");setTimeout(()=>c.classList.remove("pulse"),1600)};
   const go=(bl)=>bl==="U"?startPassage():startSession({block:bl});
   app.querySelectorAll("[data-block]").forEach(b=>b.onclick=()=>{const bl=b.dataset.block;(store.intro||{})[bl]?go(bl):intro(bl,()=>go(bl))});
   app.querySelectorAll("[data-intro]").forEach(b=>b.onclick=()=>intro(b.dataset.intro,home));
@@ -3327,8 +3465,8 @@ const SCENES={
       rows:[["Mužské osoby",[[40,"mladí"],[70,"mladí chlapci"],[100,"mladí chlapci ✓"]],""],["Ostatné",[[40,"mladé"],[70,"mladé ženy"],[100,"nové stromy ✓"]],"alt"]]},
      {t:"Slovné druhy",c:"Päť slovných druhov sa ohýba (skloňuje alebo časuje), päť nie.",
       rows:[["Ohybné",[[30,"podst. mená"],[65,"príd. mená, zámená"],[100,"číslovky, slovesá"]],""],["Neohybné",[[30,"príslovky"],[65,"predložky, spojky"],[100,"častice, citoslovcia"]],"alt"]]}],
-  L:[{t:"Ľudová slovesnosť",c:"Príslovie poúča, porekadlo len obrazne hodnotí, pranostika predpovedá počasie podľa kalendára.",
-      rows:[["Príslovie",[[100,"Bez práce nie sú koláče."],[100,"Bez práce nie sú koláče."],[100,"→ ponaučenie"]],""],["Porekadlo",[[100,"Je zdravý ako buk."],[100,"Je zdravý ako buk."],[100,"→ hodnotenie"]],"alt"],["Pranostika",[[100,"Medardova kvapka…"],[100,"Medardova kvapka…"],[100,"→ počasie"]],"mk"]]},
+  L:[{t:"Ľudová slovesnosť",c:"Príslovie poúča, porekadlo obrazne pomenúva situáciu bez ponaučenia, pranostika predpovedá počasie podľa kalendára.",
+      rows:[["Príslovie",[[100,"Bez práce nie sú koláče."],[100,"Bez práce nie sú koláče."],[100,"→ ponaučenie"]],""],["Porekadlo",[[100,"Nosí drevo do lesa."],[100,"Nosí drevo do lesa."],[100,"→ obrazné pomenovanie"]],"alt"],["Pranostika",[[100,"Medardova kvapka…"],[100,"Medardova kvapka…"],[100,"→ počasie"]],"mk"]]},
      {t:"Rým",c:"Označ konce veršov písmenami. Rovnaké písmeno = verše sa rýmujú.",
       rows:[["Združený",[[25,"A A"],[50,"A A B"],[100,"A A B B"]],""],["Striedavý",[[25,"A B"],[50,"A B A"],[100,"A B A B"]],"alt"],["Obkročný",[[25,"A B"],[50,"A B B"],[100,"A B B A"]],"mk"]]},
      {t:"Literárne druhy",c:"Lyrika vyjadruje city, epika rozpráva príbeh, dráma je určená na javisko.",
@@ -3367,7 +3505,7 @@ function intro(block,done){
 /* --- tréning --- */
 let S=null;
 function chooseTemplate(f,recent){
-  let pool=TEMPLATES.filter(t=>(!f.block||SLOTS[t.slot].block===f.block)&&(!f.slot||t.slot===f.slot));
+  let pool=TEMPLATES.filter(t=>(!f.block||SLOTS[t.slot].block===f.block)&&(!f.slot||t.slot===f.slot)&&(!f.subject||SLOTS[t.slot].subject===f.subject));
   const fresh=pool.filter(t=>!recent.includes(t.id));if(fresh.length)pool=fresh;
   const w=pool.map(t=>110-mastery(t.slot));let r=Math.random()*w.reduce((a,b)=>a+b,0);
   for(let i=0;i<pool.length;i++){r-=w[i];if(r<=0)return pool[i]}return pool[0];
@@ -3394,7 +3532,8 @@ function renderPredict(){
 function nextTask(){
   if(S.i>=S.len)return summary();
   if(S.queue){S.task=S.queue[S.i];}
-  else{const tpl=chooseTemplate(S.f,S.recent);S.recent=[tpl.id,...S.recent].slice(0,4);
+  else{if(S.f.mission)S.sub=S.i%2===0?"MAT":"SJL";
+    const tpl=chooseTemplate(S.f.mission?{subject:S.sub}:S.f,S.recent);S.recent=[tpl.id,...S.recent].slice(0,4);if(S.seen)S.seen.push(tpl.slot);
     S.task=makeTask(tpl,Math.random()<(S.sub==="SJL"?0.5:0.35)?"closed":"open");}
   S.attempts=0;S.hint=0;S.lastError=undefined;S.lastAnswer=null;S.done=false;S.chat=[];
   renderTask();
@@ -3418,7 +3557,7 @@ function taskHead(t,no){return `<div class="hd"><span class="qno">${no}</span><d
 function passagePanel(p,label,open){return `<details class="passage" ${open?"open":""}><summary>${esc(label)}</summary><div class="pbody">${passageHTML(p)}</div></details>`}
 function renderTask(){
   const t=S.task,no=String(S.i+1).padStart(2,"0"),isM=S.sub==="MAT";
-  const label=S.passage?"Čítanie s porozumením · "+S.passage.title:S.f.slot?SLOTS[S.f.slot].name:"Blok "+S.f.block+" · "+BL[S.f.block].short;
+  const label=S.f.mission?`Denná misia · ${S.sub==="MAT"?"matematika":"slovenčina"}`:S.passage?"Čítanie s porozumením · "+S.passage.title:S.f.slot?SLOTS[S.f.slot].name:"Blok "+S.f.block+" · "+BL[S.f.block].short;
   app.innerHTML=`
   <div class="crumb">${esc(label)}</div>
   <div class="progress" aria-label="Úloha ${S.i+1} z ${S.len}">${Array.from({length:S.len},(_,i)=>`<i class="${i<S.results.length?(S.results[i]>0?"ok":"bad"):i===S.i?"cur":""}"></i>`).join("")}</div>
@@ -3477,7 +3616,7 @@ function check(){
 }
 function answerLabel(t){t=t||S.task;if(t.form==="order")return t.items.map((x,i)=>(i+1)+". "+x.replace(/\*\*/g,"")).join("  ");if(t.form!=="open")return t.options.find(o=>o.id===null).label.replace(/\*\*/g,"");if(t.textAnswer)return t.accept[0];return fmt(t.answer,t.dec)+(t.unit?(t.unit==="°"?"":" ")+t.unit:"")}
 function finish(pts){
-  const t=S.task;S.done=true;S.results.push(pts);record(t.slot,pts);
+  const t=S.task;S.done=true;S.results.push(pts);record(t.slot,pts);addXP(Math.round(pts*10));
   if(t.form==="closed")app.querySelectorAll(".opt").forEach(b=>{b.disabled=true;const o=t.options[+b.dataset.i];if(o.id===null)b.classList.add("right")});
   else if(t.form==="order")app.querySelectorAll(".ord .opt").forEach(b=>{b.disabled=true;const k=+b.dataset.k,pos=(S.pick||[]).indexOf(k);b.classList.add(pos===k?"right":"wrongpick")});
   else $("#ans").readOnly=true;
@@ -3493,14 +3632,18 @@ function summary(){
   closeTutor();
   const total=S.results.reduce((a,b)=>a+b,0),max=S.results.length;
   const pct=Math.round(100*total/max);
-  const ids=S.queue?[...new Set(S.queue.map(t=>t.slot))]:[...new Set(TEMPLATES.filter(t=>(!S.f.block||SLOTS[t.slot].block===S.f.block)&&(!S.f.slot||t.slot===S.f.slot)).map(t=>t.slot))];
-  app.innerHTML=`<section class="sum"><div class="eyebrow">Výsledok tréningu</div>
+  let mdone="";
+  if(S.f.mission&&S.results.length>=S.len){const t=today();if(store.lastMission!==t){store.streak=store.lastMission===yesterday()?(store.streak||0)+1:1;store.lastMission=t;addXP(20)}store.missionDone=t;save();
+    const cf=Array.from({length:14},(_,i)=>`<i class="cf" style="left:${5+i*6.6}%;background:${["#E3F25A","#8FA4FF","#fff","#5BD098"][i%4]};animation-delay:${(i%5)*.12}s"></i>`).join("");
+    mdone=`<div class="mdone">${cf}${FLAME}<div><strong>Denná misia splnená</strong><span>Séria ${store.streak} ${daysWord(store.streak)} · +${S.xpGain||0} XP · úroveň ${levelOf(store.xp||0)}</span></div></div>`}
+  const ids=S.seen?[...new Set(S.seen)]:S.queue?[...new Set(S.queue.map(t=>t.slot))]:[...new Set(TEMPLATES.filter(t=>(!S.f.block||SLOTS[t.slot].block===S.f.block)&&(!S.f.slot||t.slot===S.f.slot)).map(t=>t.slot))];
+  app.innerHTML=`<section class="sum"><div class="eyebrow">${S.f.mission?"Výsledok dennej misie":"Výsledok tréningu"}</div>${mdone}
     <div class="score"><span class="big">${pct} %</span><span>${fmt(total,1)} z ${max} bodov</span></div>
     ${S.passage&&S.passage.predict&&S.tip!=null?`<div class="fb hint" style="margin:12px 0 0"><strong>Tvoj tip na začiatku: ${esc(S.passage.predict.options[S.tip])}</strong><p>${rich(S.passage.predict.reveal)}</p></div>`:""}
     <p class="muted" style="margin-top:8px">${pct>=90?"Výborne. Takto sa dá zvládnuť aj hranica 90 %, ktorú sledujú stredné školy.":pct>=60?"Dobrý základ. Mapa zručností ukazuje, kde ešte pridať.":"Začiatok býva ťažký. Skús trénovať jednu zručnosť naraz, s nápovedami."}</p>
     <div class="res">${ids.filter(id=>store.slots[id]).map(id=>`<div><span>${SLOTS[id].name}</span><em>${mastery(id)} %</em></div>`).join("")}</div>
-    <div class="row-btns"><button class="btn p wide" id="again">${S.queue?"Ďalšia ukážka":"Ďalší tréning"}</button><button class="btn s" id="hm">Domov</button></div></section>`;
-  $("#again").onclick=()=>S.queue?startPassage():startSession(S.f);$("#hm").onclick=home;window.scrollTo(0,0);
+    <div class="row-btns"><button class="btn p wide" id="again">${S.f.mission?"Ďalšia misia":S.queue?"Ďalšia ukážka":"Ďalší tréning"}</button><button class="btn s" id="hm">Domov</button></div></section>`;
+  $("#again").onclick=()=>S.f.mission?startMission():S.queue?startPassage():startSession(S.f);$("#hm").onclick=home;window.scrollTo(0,0);
 }
 
 /* --- test nanečisto --- */
@@ -3572,6 +3715,7 @@ function submitTest(timeUp){
   if(!X||X.done)return;X.done=true;stopTimer();closeTutor();
   const ok=X.tasks.map((t,i)=>{const a=X.ans[i];if(a==null||a==="")return false;return t.form==="order"?orderOk(t,a):t.form==="open"?checkOpen(t,a).status==="ok":t.options[a].id===null});
   X.tasks.forEach((t,i)=>record(t.slot,ok[i]?1:0));
+  store.xp=(store.xp||0)+ok.filter(Boolean).length*5;save();
   const pts=ok.filter(Boolean).length,pct=Math.round(pts/30*100);
   const avg=X.sub==="MAT"?55.9:58.4;
   const byB=SUBJ[X.sub].blocks.map(b=>{const idx=X.tasks.map((t,i)=>i).filter(i=>X.tasks[i].block===b);return [b,idx.filter(i=>ok[i]).length,idx.length]}).filter(x=>x[2]);
